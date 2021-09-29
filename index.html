@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+<style>
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 2px;
+  background: rgb(247,247,247);
+  background: radial-gradient(circle, rgba(247,247,247,1) 0%, rgba(255,255,255,1) 50%);
+}
+
+/* DIV, Containers and Articles */
+
+article {
+  width: 80%;
+  height: auto;
+  border-bottom: 1px solid grey;
+  box-shadow: 5px rgba(0,0,0,0.2);
+  text-align: left;
+}
+
+div.container {
+  display: flex;
+  width:inherit;
+  z-index: 0;
+  overflow: hidden;
+  padding: 1px;
+}
+div.container_main {
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+  z-index: 0;
+  overflow: hidden;
+  padding: 1px;
+  text-align: ;
+}
+div.left {
+  width:15vw;
+  height: 100vh;
+  overflow: visible;
+  float: left;
+  z-index: 10;
+}
+div.right {
+  width: 85vw;
+  overflow: hidden;
+  display: flex;
+  margin: ;
+  z-index: 1;
+
+}
+div.title {
+  margin-top: 20px;
+  padding: 0%;
+}
+
+div.footer {
+  height: auto;
+  border-top: 1px solid grey;
+  background-color: black;
+  display: flex;
+}
+
+/* Article Divs */
+div.article1 {
+  width: 100%;
+  height: 20%;
+  order: 1;
+  float: right;
+}
+div.article2 {
+  width: 80%;
+  height: 20%;
+  order: 2;
+}
+div.article3 {
+  width: 80%;
+  height: 20%;
+  order: 3;
+}
+div.article4 {
+  width: 80%;
+  height: 20%;
+  order: 4;
+}
+
+div.article_wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+div.img {
+  width: 220px;
+  justify-content: center;
+  margin: 15px;
+
+  float:left;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+
+/* Back to top start */
+.back-to-top {
+  background-color: mediumspringgreen;
+  color: white;
+  opacity: 0;
+  transition: opacity .6s ease-in-out;
+  z-index: 999;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  width: 100px;
+  height: 100px;
+  box-sizing: border-box;
+  border-radius: 0;
+}
+
+a.back-to-top {
+  font-weight: 1000;
+  letter-spacing: 2px;
+  font-size: 1em;
+  text-transform: uppercase;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 1.6;
+  padding-left: 2px;
+  padding-top: 14px;
+}
+
+.back-to-top:hover, .back-to-top:focus, .back-to-top:visited {
+  color: slategray;
+}
+
+.back-to-top.show {
+  opacity: 1;
+}
+/* Back to top end */
+
+/* navigation */
+.navbar {
+  overflow: visible;
+  flex-direction: column;
+  box-shadow: 5px rgba(0,0,0,0.2);
+  z-index: 10;
+  text-align: left;
+  justify-content: space-around;
+  font-family: 'Open Sans', sans-serif;
+  min-width: 200px;
+
+}
+
+.navbar a {
+  text-align: center;
+  float: left;
+  font-size: 1.5vw;
+  color: slategrey;
+  text-align: left;
+  justify-content: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  box-shadow: 5px rgba(0,0,0,0.2);
+  min-width: 200px;
+  z-index: 10;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 1.5vw;
+  border: none;
+  outline: none;
+  color: slategrey;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+}
+.dropbtn {
+  color: black;
+}
+.navbar a:hover, .dropdown:hover {
+  background-color:;
+  color: mediumspringgreen;
+}
+
+.dropdown-content {
+  display: none;
+  position: ;
+  color: slategrey;
+  background-color: white;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 10px rgba(0,0,0,0.2);
+  z-index: 11;
+}
+
+.dropdown-content a {
+  float: none;
+  color: slategrey;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: ;
+  color: mediumspringgreen;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Font Formatting */
+
+h1 {
+  font-family: 'Open Sans', sans-serif;
+  color: slategray;
+  font-size: 7vh;
+  padding-left: 20px;
+  font-weight: bolder;
+}
+h2 {
+  font-family: 'Open Sans', sans-serif;
+  color: mediumspringgreen;
+  font-size: 3vh;
+  padding-left: 20px;
+  font-weight: bolder;
+}
+
+h3 {
+  font-family: 'Open Sans', sans-serif;
+  color: grey;
+  font-size: 1.5vh;
+  padding-left: 20px;
+  font-weight: lighter;
+}
+
+p.heading {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2em;
+  color: black;
+  margin-left: 5%;
+  text-align: left;
+  letter-spacing: 2px;
+  line-height: 1;
+  font-weight: 900;
+}
+
+p.subheading {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.5vw;
+  color: black;
+  font-weight: bold;
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: left;
+  text-justify: inter-word;
+  letter-spacing: 2px;
+}
+p.body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  font-weight: lighter;
+  line-height: 1.6;
+  letter-spacing: 2px;
+  color: grey;
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: left;
+  justify-content: space-around;
+}
+
+/* IMG Formatting */
+img.logo {
+  max-width: 90%;
+}
+
+img.article {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  object-position: 100% 0;
+  padding: 5px;
+  float: left;
+  justify-content:
+  display:inline-block;
+  vertical-align: middle;
+}
+
+a {
+  text-decoration: none;
+  color: slategrey;
+}
+a:hover {
+  color: mediumspringgreen;
+}
+
+</style>
+<head>
+  <meta charset="utf-8">
+  <title>COSC1078 - Wildcats - Assignment 3: Splash Page</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+  <a href="#" id="back-to-top" class="back-to-top" style="display: inline;">Top</a>
+  <div class="left">
+    <div class="navbar">
+      <a href="index.html">
+      <img class="logo" src="images/logos/logo.png">
+      </a>
+      <div class="dropdown">
+        <button class="dropbtn">About the team
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="site_about.html">Team Profiles</a>
+          <a href="site_about_team.html">Personal Information</a>
+          <a href="site_about_groupprocesses.html">Group Processes</a>
+          <a href="site_about_careerplans.html">Career Plans</a>
+          <a href="site_about_feedback.html">Feedback</a>
+          <a href="site_about_reflection.html">Group Reflection</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Tools
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="site_tools_github.html">Github</a>
+          <a href="site_tools_msteams.html">MS Teams</a>
+        </div>
+      </div>
+      <a href="site_skillsandjobs.html">Skills & Jobs</a>
+      <div class="dropdown">
+        <button class="dropbtn">Project: DnDeasy
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="site_it-tech_cloud.html">Overview</a>
+          <a href="site_it-tech_cyber.html">Aims</a>
+          <a href="site_it-tech_machine.html">Plans & Progress</a>
+          <a href="site_it-tech_chatterbot.html">Roles</a>
+          <a href="site_it-tech_chatterbot.html">Scope and Limits</a>
+          <a href="site_it-tech_chatterbot.html">Tools and Technologies</a>
+          <a href="site_it-tech_chatterbot.html">Testing</a>
+          <a href="site_it-tech_chatterbot.html">Timeframe</a>
+          <a href="site_it-tech_chatterbot.html">Risks</a>
+          <a href="site_it-tech_chatterbot.html">Group processes & communications</a>
+        </div>
+      </div>
+      <a href="site_references.html">References</a>
+    </div>
+  </div>
+  <div class="right">
+    <div class="container_main">
+      <img src="images/logos/cooltext394234243048821.png">
+      </div>
+    </div>
+    <script>
+      var link = document.getElementById("back-to-top");
+      var amountScrolled = 250;
+
+      window.addEventListener('scroll', function(e) {
+          if ( window.pageYOffset > amountScrolled ) {
+              link.classList.add('show');
+          } else {
+              link.className = 'back-to-top';
+          }
+      });
+    <!-- Scrolls to Top -->
+      link.addEventListener('click', function(e) {
+          e.preventDefault();
+
+          var distance = 0 - window.pageYOffset;
+          var increments = distance/(500/16);
+          function animateScroll() {
+              window.scrollBy(0, increments);
+              if (window.pageYOffset <= document.body.offsetTop) {
+                  clearInterval(runAnimation);
+              }
+          };
+          // Loop the animation function
+          var runAnimation = setInterval(animateScroll, 16);
+      });
+
+    </script>
+</body>
+</html>
