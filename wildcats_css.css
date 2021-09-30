@@ -7,15 +7,15 @@ body {
   background-repeat: no-repeat;
 }
 
-/* DIV, Containers and Articles */
-
 article {
-  width: 80%;
+  width: auto;
   height: auto;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid slategrey;
   box-shadow: 5px rgba(0,0,0,0.2);
-  text-align: left;
+  text-align: center;
 }
+
+/* DIV, Containers and Articles */
 
 div.container {
   display: flex;
@@ -219,10 +219,12 @@ a.back-to-top {
 
 h1 {
   font-family: 'Open Sans', sans-serif;
-  color: slategray;
+  color: whitesmoke;
   font-size: 7vh;
   padding-left: 20px;
   font-weight: bolder;
+  margin-left: auto;
+  margin-bottom: 5%;
 }
 h2 {
   font-family: 'Open Sans', sans-serif;
@@ -230,14 +232,16 @@ h2 {
   font-size: 3vh;
   padding-left: 20px;
   font-weight: bolder;
+  margin: auto;
 }
 
 h3 {
   font-family: 'Open Sans', sans-serif;
-  color: grey;
-  font-size: 1.5vh;
+  color: whitesmoke;
+  font-size: 2vh;
   padding-left: 20px;
   font-weight: lighter;
+  margin: auto;
 }
 
 p.heading {
@@ -268,7 +272,7 @@ p.body {
   font-weight: lighter;
   line-height: 1.6;
   letter-spacing: 2px;
-  color: grey;
+  color: black;
   margin-left: 10%;
   margin-right: 10%;
   text-align: left;
@@ -295,7 +299,7 @@ img.article {
 img.centre {
   width: 80%;
   display: block;
-  margin-top: 30%;
+  margin-top: auto;
   margin-left: auto;
   margin-right: auto;
 }
