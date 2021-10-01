@@ -304,6 +304,7 @@ img.article {
 img.centre {
   width: 80%;
   display: block;
+  padding: 30px;
   margin-top: auto;
   margin-left: auto;
   margin-right: auto;
