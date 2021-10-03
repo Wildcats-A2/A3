@@ -221,7 +221,7 @@ h1 {
   font-family: 'Open Sans', sans-serif;
   color: whitesmoke;
   font-size: 7vh;
-  padding-left: 20px;
+  padding-left: ;
   font-weight: bolder;
   margin-left: auto;
   margin-bottom: 5%;
@@ -231,7 +231,7 @@ h2 {
   font-family: 'Open Sans', sans-serif;
   color: mediumspringgreen;
   font-size: 3vh;
-  padding-left: 20px;
+  padding-left: ;
   font-weight: bolder;
   margin: auto;
   letter-spacing: 2px;
@@ -240,9 +240,9 @@ h2 {
 h3 {
   font-family: 'Open Sans', sans-serif;
   color: whitesmoke;
-  font-size: 2vh;
-  padding-left: 20px;
-  font-weight: lighter;
+  font-size: 2.5vh;
+  padding-left: ;
+  font-weight: bold;
   margin: auto;
   letter-spacing: 2px;
 }
