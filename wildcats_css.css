@@ -233,7 +233,8 @@ h2 {
   font-size: 3vh;
   padding-left: ;
   font-weight: bolder;
-  margin: auto;
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
   letter-spacing: 2px;
 }
 
@@ -243,7 +244,8 @@ h3 {
   font-size: 2.5vh;
   padding-left: ;
   font-weight: bold;
-  margin: auto;
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
   letter-spacing: 2px;
 }
 
@@ -251,10 +253,10 @@ h4 {
   font-family: 'Open Sans', sans-serif;
   color: whitesmoke;
   font-size: 2vh;
-  padding-left: ;
   font-weight: lighter;
-  margin: auto;
   letter-spacing: 2px;
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
 }
 
 p.heading {
