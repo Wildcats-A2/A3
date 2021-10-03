@@ -247,6 +247,16 @@ h3 {
   letter-spacing: 2px;
 }
 
+h4 {
+  font-family: 'Open Sans', sans-serif;
+  color: whitesmoke;
+  font-size: 2vh;
+  padding-left: ;
+  font-weight: lighter;
+  margin: auto;
+  letter-spacing: 2px;
+}
+
 p.heading {
   font-family: 'Open Sans', sans-serif;
   font-size: 2em;
