@@ -1,247 +1,216 @@
 body {
+  max-width: 90vw;
+  max-height: 100vh;
   font-family: 'Open Sans', sans-serif;
-  s
+  background-image: url("large-triangles.svg");
+}
+/* Back to top start */
+.back-to-top {
+  background-color: mediumspringgreen;
+  color: white;
+  opacity: 0;
+  transition: opacity .6s ease-in-out;
+  z-index: 999;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  width: 100px;
+  height: 100px;
+  box-sizing: border-box;
+  border-radius: 0;
 }
 
-#menuToggle
-{
+a.back-to-top {
+  font-weight: 1000;
+  letter-spacing: 2px;
+  font-size: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 1.6;
+  padding-left: 2px;
+  padding-top: 14px;
+}
+
+.back-to-top:hover, .back-to-top:focus, .back-to-top:visited {
+  color: slategray;
+}
+
+.back-to-top.show {
+  opacity: 1;
+}
+/* Back to top end */
+/* Menu */
+
+#menuToggle {
   display: block;
   position: relative;
   top: 50px;
   left: 50px;
-
   z-index: 1;
-
   -webkit-user-select: none;
   user-select: none;
 }
 
-#menuToggle a
-{
+#menuToggle a {
   text-decoration: none;
-  color: #232323;
+  color: azure;
 
   transition: color 0.3s ease;
 }
 
-#menuToggle a:hover
-{
-  color: tomato;
+#menuToggle a:hover {
+  color: mediumspringgreen;
 }
 
 
-#menuToggle input
-{
+#menuToggle input {
   display: block;
   width: 40px;
   height: 32px;
   position: absolute;
   top: -7px;
   left: -5px;
-
   cursor: pointer;
-
   opacity: 0; /* hide this */
   z-index: 2; /* and place it over the hamburger */
-
   -webkit-touch-callout: none;
 }
 
-#menuToggle span
-{
+#menuToggle span {
   display: block;
-  width: 33px;
-  height: 4px;
+  width: 40px;
+  height: 5px;
   margin-bottom: 5px;
   position: relative;
-
-  background: #cdcdcd;
+  background: azure;
   border-radius: 3px;
-
   z-index: 1;
-
   transform-origin: 4px 0px;
-
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
               background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
               opacity 0.55s ease;
 }
 
-#menuToggle span:first-child
-{
+#menuToggle span:first-child {
   transform-origin: 0% 0%;
 }
 
-#menuToggle span:nth-last-child(2)
-{
-  transform-origin: 0% 100%;
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 0%;
 }
 
-#menuToggle input:checked ~ span
-{
+#menuToggle input:checked ~ span {
   opacity: 1;
-  transform: rotate(45deg) translate(-2px, -1px);
-  background: #232323;
+  transform: rotate(45deg) translate(-2px, -2px);
+  background: azure;
 }
 
-#menuToggle input:checked ~ span:nth-last-child(3)
-{
+#menuToggle input:checked ~ span:nth-last-child(3) {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
 
-#menuToggle input:checked ~ span:nth-last-child(2)
-{
+#menuToggle input:checked ~ span:nth-last-child(2) {
   transform: rotate(-45deg) translate(0, -1px);
 }
 
-#menu
-{
+#menu {
   position: absolute;
-  width: 300px;
+  width: ;
   margin: -100px 0 0 -50px;
   padding: 50px;
   padding-top: 125px;
-
-  background: #ededed;
+  background: black;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   /* to stop flickering of text in safari */
-
   transform-origin: 0% 0%;
   transform: translate(-100%, 0);
-
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
-#menu li
-{
+#menu li {
   padding: 10px 0;
-  font-size: 22px;
+  font-size: 50px;
 }
 
-#menuToggle input:checked ~ ul
-{
+#menuToggle input:checked ~ ul {
   transform: none;
 }
 
-article {
-  width: auto;
-  height: auto;
-  border-bottom: 1px solid slategrey;
-  box-shadow: 5px rgba(0,0,0,0.2);
+div.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
   text-align: center;
 }
 
-/* DIV, Containers and Articles */
-
-div.container {
-  display: flex;
-  width: 95vw;
-  z-index: 0;
-  overflow: hidden;
-  padding: 1px;
-}
-div.container_main {
-  display: flex;
-  flex-direction: column;
-  margin: 5px;
-  z-index: 0;
-  overflow: hidden;
-  padding: 1px;
-  text-align: ;
-  width: 80%;
-}
-div.left {
-  width:15vw;
-  height: 100vh;
-  overflow: visible;
-  float: left;
-  z-index: 10;
-}
-div.right {
-  width: 85vw;
-  overflow: hidden;
-  display: flex;
-  margin: ;
-  z-index: 1;
-
-}
-div.title {
-  margin-top: 20px;
-  padding: 0%;
-}
-
-div.footer {
-  height: auto;
-  border-top: 1px solid grey;
-  background-color: black;
-  display: flex;
-}
-
-/* Article Divs */
-div.article1 {
-  width: 100%;
-  height: 20%;
-  order: 1;
-  float: right;
-}
-div.article2 {
-  width: 80%;
-  height: 20%;
-  order: 2;
-}
-div.article3 {
-  width: 80%;
-  height: 20%;
-  order: 3;
-}
-div.article4 {
-  width: 80%;
-  height: 20%;
-  order: 4;
-}
-
-div.article_wrapper {
-  display: flex;
+div.sub_container {
   flex-direction: row;
+  justify-content: center;
+  text-align: center;
 }
 
-div.img {
-  width: ;
+div.main_bubble {
+  display: flex;
+  width: 80%;
+  border-radius: 15px 50px 30px 5px;
+  background: rgb(46,46,46);
+  background: linear-gradient(146deg, rgba(46,46,46,1) 0%, rgba(96,96,96,1) 100%);
+  margin-top: 0;
+  padding-top: 0%;
+  padding-left: 5%;
+  padding-right: 5%;
+  width: 80%;
+  height:;
+  flex-direction: column;
+  flex-wrap: wrap;
   justify-content: center;
-  margin: 15px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
 
-  float:left;
+div.sub_left {
+  width: 40%;
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: center;
+  text-align: center;
+}
+
+div.sub_right {
+  width: 40%;
+  display: inline-block;
+  text-align: left;
+  vertical-align: top;
 }
 
 /* Font Formatting */
 
 h1 {
   font-family: 'Open Sans', sans-serif;
-  color: whitesmoke;
-  font-size: 7vh;
+  color: mediumspringgreen;
+  font-size: 8vh;
   font-weight: bolder;
-  margin-left: auto;
-  margin-bottom: 5%;
   letter-spacing: 2px;
+  margin: 0%;
 }
+
 h2 {
   font-family: 'Open Sans', sans-serif;
   color: mediumspringgreen;
   font-size: 3vh;
   padding-left: ;
   font-weight: bolder;
-  margin-top: 2.5%;
+  margin-top: 0;
   margin-bottom: 2.5%;
   letter-spacing: 2px;
 }
 
 h3 {
   font-family: 'Open Sans', sans-serif;
-  color: whitesmoke;
+  color: white;
   font-size: 2.5vh;
   padding-left: ;
   font-weight: bold;
@@ -252,7 +221,7 @@ h3 {
 
 h4 {
   font-family: 'Open Sans', sans-serif;
-  color: whitesmoke;
+  color: white;
   font-size: 2vh;
   font-weight: lighter;
   letter-spacing: 2px;
@@ -260,73 +229,98 @@ h4 {
   margin-bottom: 2.5%;
 }
 
-p.heading {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 2em;
-  color: black;
-  margin-left: 5%;
-  text-align: left;
-  letter-spacing: 2px;
-  line-height: 1;
-  font-weight: 900;
-}
-
-p.subheading {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1.5vw;
-  color: black;
-  font-weight: bold;
-  margin-left: 10%;
-  margin-right: 10%;
-  text-align: left;
-  text-justify: inter-word;
-  letter-spacing: 2px;
-}
 p.body {
   font-family: 'Open Sans', sans-serif;
-  font-size: 1em;
+  font-size: 30px;
   font-weight: lighter;
   line-height: 1.6;
   letter-spacing: 2px;
-  color: black;
-  margin-left: 10%;
-  margin-right: 10%;
+  color: white;
+  padding-bottom: 5%;
   text-align: left;
-  justify-content: space-around;
-}
-
-/* IMG Formatting */
-img.logo {
-  max-width: 90%;
-}
-
-img.article {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  object-position: 100% 0;
-  padding-right: 50px;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  float: left;
-  justify-content:
-  display:inline-block;
-  vertical-align: middle;
-}
-
-img.centre {
-  width: 80%;
-  display: block;
-  padding: 30px;
-  margin-top: auto;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 a {
   text-decoration: none;
   color: white;
+  font-size: 30px;
 }
 a:hover {
   color: mediumspringgreen;
+}
+
+img {
+  max-width:80%;
+  padding: 5%;
+}
+
+ul {
+  color: white;
+  line-height: 2;
+}
+
+article {
+  width: auto;
+  height: auto;
+  border-top: 1px solid slategrey;
+  border-bottom: 1px solid slategrey;
+  box-shadow: 5px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+/* Popup container - can be anything you want */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 50v;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
 }

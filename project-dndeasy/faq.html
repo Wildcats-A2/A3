@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<style>
+body {
+  max-width: 95vw;
+  max-height: 100vh;
+  font-family: 'Open Sans', sans-serif;
+  background-image: url("large-triangles.svg");
+}
+
+#menuToggle {
+  display: block;
+  position: relative;
+  top: 50px;
+  left: 50px;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a {
+  text-decoration: none;
+  color: azure;
+
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover {
+  color: mediumspringgreen;
+}
+
+
+#menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  -webkit-touch-callout: none;
+}
+
+#menuToggle span {
+  display: block;
+  width: 40px;
+  height: 5px;
+  margin-bottom: 5px;
+  position: relative;
+  background: azure;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 0%;
+}
+
+#menuToggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -2px);
+  background: azure;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu {
+  position: absolute;
+  width: ;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  background: black;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li {
+  padding: 10px 0;
+  font-size: 50px;
+}
+
+#menuToggle input:checked ~ ul {
+  transform: none;
+}
+
+div.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+div.character_bio {
+  display: flex;
+  width: 80%;
+  border-radius: 15px 50px;
+  background: azure;
+  padding: 20px;
+  width: 80%;
+  height:;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+/* Font Formatting */
+
+h1 {
+  font-family: 'Open Sans', sans-serif;
+  color: azure;
+  font-size: 70px;
+  font-weight: bolder;
+  letter-spacing: 2px;
+}
+h2 {
+  font-family: 'Open Sans', sans-serif;
+  color: mediumspringgreen;
+  font-size: 3vh;
+  padding-left: ;
+  font-weight: bolder;
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
+  letter-spacing: 2px;
+}
+
+h3 {
+  font-family: 'Open Sans', sans-serif;
+  color: whitesmoke;
+  font-size: 2.5vh;
+  padding-left: ;
+  font-weight: bold;
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
+  letter-spacing: 2px;
+}
+
+h4 {
+  font-family: 'Open Sans', sans-serif;
+  color: whitesmoke;
+  font-size: 2vh;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
+}
+
+p.body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 30px;
+  font-weight: lighter;
+  line-height: 1.6;
+  letter-spacing: 2px;
+  color: black;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+a:hover {
+  color: mediumspringgreen;
+}
+</style>
+<head>
+  <meta charset="utf-8">
+  <title>DnDeasy: FAQ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;800&display=swap" rel="stylesheet">
+  <link href="project.css" rel="stylesheet" type="text/css">s
+</head>
+
+<body>
+  <nav role="navigation">
+    <div id="menuToggle">
+      <input type="checkbox">
+      <span></span>
+      <span></span>
+      <span></span>
+      <ul id="menu">
+        <li>Welcome back John Doe! Ready to play another game?</li>
+        <a href="character_creation.html"><li>Character Creation</li></a>
+        <a href="tutorial.html"><li>Tutorial</li></a>
+        <a href="character_sheet.html"><li>Character Sheet</li></a>
+        <a href="faq.html"><li>FAQ</li></a>
+        <a href="login.html"><li>Logout</li></a>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <h1>D&Deasy</h1>
+    <h2>A beginners wizard to Dungeons & Dragons</h2>
+      <div class="main_bubble">
+        <h2>FAQ</h2>
+        <p class="body">
+          <ul>
+            <li>AC? DC?</li>
+            <li>How do I hit / save / use a skill?</li>
+            <li>How do I deal damage?</li>
+            <li>Spells? Spell Slots?</li>
+            <li>Am I Proficient? What is Proficiency?</li>
+            <li>What can I do on my turn?</li>
+          </ul>
+      </p>
+      </div>
+
+  </div>
+  <script>
+    var link = document.getElementById("back-to-top");
+    var amountScrolled = 250;
+
+    window.addEventListener('scroll', function(e) {
+        if ( window.pageYOffset > amountScrolled ) {
+            link.classList.add('show');
+        } else {
+            link.className = 'back-to-top';
+        }
+    });
+  <!-- Scrolls to Top -->
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        var distance = 0 - window.pageYOffset;
+        var increments = distance/(500/16);
+        function animateScroll() {
+            window.scrollBy(0, increments);
+            if (window.pageYOffset <= document.body.offsetTop) {
+                clearInterval(runAnimation);
+            }
+        };
+        // Loop the animation function
+        var runAnimation = setInterval(animateScroll, 16);
+    });
+  </script>
+</body>
+</html>

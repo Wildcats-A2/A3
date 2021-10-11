@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>DnDeasy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;800&display=swap" rel="stylesheet">
+  <link href="project.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+  <a href="#" id="back-to-top" class="back-to-top" style="display: inline;">Top</a>
+  <nav role="navigation">
+    <div id="menuToggle">
+      <input type="checkbox">
+      <span></span>
+      <span></span>
+      <span></span>
+      <ul id="menu">
+        <p class="body">
+        Welcome back John Doe!<br>
+        Ready to play another game?
+        </p>
+        <a href="character_creation.html"><li>Character Creation</li></a>
+        <a href="tutorial.html"><li>Tutorial</li></a>
+        <a href="character_sheet.html"><li>Character Sheet</li></a>
+        <a href="faq.html"><li>FAQ</li></a>
+        <a href="login.html"><li>Logout</li></a>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <br><br>
+    <h1>DnDeasy<h1>
+      <h2>A beginners wizard to Dungeons & Dragons</h2>
+      <div class="main_bubble">
+        <h2>Tutorial</h2>
+          <article>
+            <div class="sub_container">
+          </div>
+        </article>
+    </div>
+  </div>
+<script>
+  var link = document.getElementById("back-to-top");
+  var amountScrolled = 250;
+
+  window.addEventListener('scroll', function(e) {
+      if ( window.pageYOffset > amountScrolled ) {
+          link.classList.add('show');
+      } else {
+          link.className = 'back-to-top';
+      }
+  });
+<!-- Scrolls to Top -->
+  link.addEventListener('click', function(e) {
+      e.preventDefault();
+
+      var distance = 0 - window.pageYOffset;
+      var increments = distance/(500/16);
+      function animateScroll() {
+          window.scrollBy(0, increments);
+          if (window.pageYOffset <= document.body.offsetTop) {
+              clearInterval(runAnimation);
+          }
+      };
+      // Loop the animation function
+      var runAnimation = setInterval(animateScroll, 16);
+  });
+</script>
+</body>
+</html>
