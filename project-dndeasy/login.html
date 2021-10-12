@@ -29,20 +29,34 @@
     </div>
   </nav>
   <div class="container">
-    <h1>D&Deasy</h1>
-    <h2>A beginners wizard to Dungeons & Dragons</h2>
-      <div class="main_bubble">
-        <p class="body">
-          INSERT LOGIN MOCKUP<BR>
-          USERNAME<BR>
-          PASSWORD<BR>
-
-          <a href="character_creation.html">LOGIN BUTTON</a>
-      </p>
+    <img class="heading" src="SVG/3D Slate Gray.svg">
+      <div class="login_main_bubble">
+        <div id="id01" class="modal">
+        <div class="login_container">
+          <form class="modal-content animate" action="character_creation.html" method="post">
+              <label for="uname">Username</label>
+              <input type="text" placeholder="Enter Username" name="uname" required>
+              <label for="psw">Password</label>
+              <input type="password" placeholder="Enter Password" name="psw" required>
+              <form action="character_creation.html"><button type="submit">Login</button></form>
+              <a href="#">Forgot password?</a>
+          </form>
+        </div>
+        </div>
       </div>
 
   </div>
   <script>
+  // Get the modal
+  var modal = document.getElementById('id01');
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+      if (event.target == modal) {
+          modal.style.display = "none";
+      }
+  }
+
     var link = document.getElementById("back-to-top");
     var amountScrolled = 250;
 
