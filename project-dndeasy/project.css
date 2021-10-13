@@ -186,7 +186,7 @@ div.main_bubble {
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 0%;
+  margin-top: 20%;
   margin-left: 5%;
   margin-right: 5%;
 }
@@ -205,7 +205,7 @@ div.login_main_bubble {
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: ;
+  margin-top: 20%;
   margin-left: 7%;
   margin-right: 7%;
   z-index: ;
@@ -294,7 +294,10 @@ img {
 }
 
 img.heading {
-  max-width: 70vw;
+  position: absolute;
+  right:0;
+  top:0;
+  max-width: 40vw;
   padding-top: 0;
   margin-top: 20px;
   padding-left: ;
