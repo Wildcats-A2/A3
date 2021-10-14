@@ -8,8 +8,11 @@ body {
 }
 
 article {
+
   width: auto;
   height: auto;
+  padding: 0%;
+  margin: 0%;
   border-bottom: 1px solid slategrey;
   box-shadow: 5px rgba(0,0,0,0.2);
   text-align: center;
@@ -31,18 +34,18 @@ div.container_main {
   z-index: 0;
   overflow: hidden;
   padding: 1px;
-  text-align: ;
-  width: 80%;
+  text-align: center;
+  width: 80vw;
 }
 div.left {
-  width:15vw;
+  width:20vw;
   height: 100vh;
   overflow: visible;
   float: left;
   z-index: 10;
 }
 div.right {
-  width: 85vw;
+  width: 80vw;
   overflow: hidden;
   display: flex;
   margin: ;
@@ -85,14 +88,17 @@ div.article4 {
 }
 
 div.article_wrapper {
-  display: flex;
-  flex-direction: row;
+  padding: 10%;
+  display: block;
 }
 
 div.img {
-  width: ;
+  width: 30%;
+  height: 100%;
   justify-content: center;
-  margin: 15px;
+  padding-top: 0%;
+  margin-top: 0%;
+  margin-right: 5%;
 
   float:left;
   display: inline-block;
@@ -146,8 +152,7 @@ a.back-to-top {
   text-align: left;
   justify-content: space-around;
   font-family: 'Open Sans', sans-serif;
-  min-width: 200px;
-
+  min-width: 20vw;
 }
 
 .navbar a {
@@ -167,6 +172,8 @@ a.back-to-top {
 .dropdown {
   float: left;
   overflow: hidden;
+
+
 }
 
 .dropdown .dropbtn {
@@ -181,6 +188,8 @@ a.back-to-top {
 }
 .dropbtn {
   color: black;
+  width: 20vw;
+  text-align: left;
 }
 .navbar a:hover, .dropdown:hover {
   background-color:;
@@ -290,6 +299,7 @@ p.body {
   color: black;
   margin-left: 10%;
   margin-right: 10%;
+  padding: 0%;
   text-align: left;
   justify-content: space-around;
 }
@@ -300,8 +310,8 @@ img.logo {
 }
 
 img.article {
-  width: 200px;
-  height: 200px;
+  max-width: 100%;
+
   object-fit: cover;
   object-position: 100% 0;
   padding-right: 50px;
@@ -337,9 +347,23 @@ ul {
   line-height: 2;
   letter-spacing: 2px;
   color: black;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 0%;
+  margin-right: 0%;
   text-align: left;
   padding-left: 5%;
-  padding-right: 5%;
+  padding-right: 0%;
+}
+
+ol {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: ;
+  font-size: 1em;
+  line-height: 1.5;
+  letter-spacing: 2px;
+  color: black;
+  margin-left: 0%;
+  margin-right: 0%;
+  text-align: left;
+  padding-left: 5%;
+  padding-right: 0%;
 }
