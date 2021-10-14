@@ -1,0 +1,474 @@
+body {
+  max-width: 100vw;
+  max-height: 100vh;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  background-image: url("/Users/daniel/Documents/GitHub/A3/project-dndeasy/project_bg.svg");
+  background-size: cover;
+  background-attachment: fixed;
+  justify-content: space-around;
+  margin: 0%;
+}
+/* Back to top start */
+.back-to-top {
+  background-color: black;
+  color: mediumspringgreen;
+  opacity: 0;
+  transition: opacity .6s ease-in-out;
+  z-index: 999;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  width: 100px;
+  height: 100px;
+  box-sizing: border-box;
+  border-radius: 0;
+}
+
+a.back-to-top {
+  font-weight: 1000;
+  letter-spacing: 2px;
+  font-size: 1em;
+  text-transform: uppercase;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 1.6;
+  padding-left: 2px;
+  padding-top: 14px;
+}
+
+.back-to-top:hover, .back-to-top:focus, .back-to-top:visited {
+  color: slategray;
+}
+
+.back-to-top.show {
+  opacity: 1;
+}
+/* Back to top end */
+/* Menu */
+
+#menuToggle {
+  display: block;
+  position: relative;
+  width: 85%;
+  margin: 0%;
+  top: 20px;
+  left: 50px;
+  z-index: 10;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a {
+  text-decoration: none;
+  color: white;
+
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover {
+  color: mediumspringgreen;
+}
+
+
+#menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  -webkit-touch-callout: none;
+}
+
+#menuToggle span {
+  display: block;
+  width: 40px;
+  height: 5px;
+  margin-bottom: 5px;
+  position: relative;
+  background: slategray;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 0%;
+}
+
+#menuToggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -2px);
+  background: white;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu {
+  position: absolute;
+  width: ;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  background-color: slategray;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li {
+  padding: 10px 0;
+  font-size: 1em;
+  line-height: 0.5;
+}
+
+#menuToggle input:checked ~ ul {
+  transform: none;
+}
+
+div.container {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+div.login_container {
+  margin-left:;
+  margin-right:;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-left: 20%;
+  padding-right: 20%;
+  max-height: 100vh;
+}
+
+div.sub_container {
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+}
+
+div.main_bubble {
+  display: inline-flex;
+  width: 100%;
+  width: 90%;
+  border-radius: 30px 30px 0px 0px;
+  background-color: slategray;
+
+  padding-top: 0%;
+  padding-left: 0%;
+  padding-right: 0%;
+
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+div.login_main_bubble {
+  display: inline-flex;
+  width: 90%;
+  max-width: ;
+  border-radius: 30px 30px 0px 0px;
+  background-color: slategray;
+
+  padding-top: 0%;
+  padding-left: 5%;
+  padding-right: 5%;
+
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20%;
+  margin-left: 7%;
+  margin-right: 7%;
+  z-index: ;
+}
+
+div.sub_left {
+  width: 40%;
+  display: inline-block;
+  vertical-align: center;
+  text-align: center;
+}
+
+div.sub_right {
+  width: 40%;
+  display: inline-block;
+  text-align: left;
+  vertical-align: top;
+}
+
+/* Font Formatting */
+
+h1 {
+  font-family: 'Open Sans', sans-serif;
+  color: mediumspringgreen;
+  font-size: 2em;
+  font-weight: bolder;
+  letter-spacing: 2px;
+  margin: 0%;
+}
+
+h2 {
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  font-size: 1.5em;
+  padding-left: ;
+  font-weight: bolder;
+  margin-top: 0;
+  margin-bottom: 2.5%;
+  letter-spacing: 2px;
+}
+
+h3 {
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  font-size: 1em;
+  padding-left: ;
+  font-weight: bold;
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
+  letter-spacing: 2px;
+}
+
+h4 {
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  font-size: 1em;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
+}
+
+p.body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  font-weight: lighter;
+  line-height: 1.6;
+  letter-spacing: 2px;
+  color: white;
+  padding-bottom: 5%;
+  text-align: left;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 1em;
+}
+a:hover {
+  color: mediumspringgreen;
+}
+
+img {
+  max-width:80%;
+  padding: 5%;
+}
+
+img.heading {
+  position: absolute;
+  right:5%;
+  top:0;
+  max-width: 30vw;
+  padding-top: 0;
+  margin-top: 20px;
+  padding-left: ;
+  padding-right: ;
+  text-align: center;
+  justify-content: center;
+  z-index: 9;
+}
+
+img.account {
+  width:50%;
+
+}
+
+ul {
+  color: white;
+  line-height: 2;
+}
+
+article {
+  width: auto;
+  height: auto;
+  border-top: 1px solid slategrey;
+  border-bottom: 1px solid slategrey;
+  box-shadow: 5px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+/* Character sheet styling */
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column4 {
+  float: left;
+  width: 25%;
+}
+
+@media screen and (max-width: 1840px) {
+  .column4 {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 915px) {
+  .column4 {
+    width: 100%;
+  }
+}
+
+.column3 {
+  float: left;
+  width: 33.33%
+}
+
+@media screen and (max-width: 1600px) {
+  .column3 {
+    width: 100%;
+  }
+}
+
+table.charsheet {
+  border-collapse: collapse;
+  background-color: white;
+  width:100%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+
+table.charsheet > * > * > *{
+  border: 0px solid slategray;
+
+}
+
+table > * > * > th{
+  color: darkgreen;
+  font-size: 0.8rem;
+}
+
+th.table-title {
+  font-size: 1rem;
+  color: slategray;
+}
+
+td {
+  font-size: 0.8em;
+}
+
+tr.checkbox > td {
+  height: 1rem;
+}
+
+/* Popup container - can be anything you want */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: 50v;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
+/* Login Page */
+input[type=text], input[type=password] {
+  max-width: 90%;
+  padding: 12px 20px;
+  margin-left: 0%;
+  margin-right: 0%;
+  display: inline-inline-flex;
+  border: 0 solid #ccc;
+  box-sizing: border-box;
+}
+
+label {
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.5em;
+}
