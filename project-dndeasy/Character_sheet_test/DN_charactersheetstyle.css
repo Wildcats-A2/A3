@@ -382,7 +382,7 @@ table.charsheet {
 }
 
 table.charsheet > * > * > *{
-  border: 0px solid slategray;
+  border: 1px solid slategray;
 
 }
 
