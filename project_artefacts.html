@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>COSC1078 - Wildcats - Assignment 3: Project Artefacts</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;800&display=swap" rel="stylesheet">
+  <link href="wildcats_css.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="container">
+  <a href="#" id="back-to-top" class="back-to-top" style="display: inline;">Top</a>
+  <div class="left">
+    <navigation>
+    <div class="navbar">
+      <a href="index.html">
+      <img class="logo" src="images/logos/logo.png">
+      </a>
+      <div class="dropdown">
+        <button class="dropbtn">About the team
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="site_team_profile.html">Team Profiles</a>
+          <a href="site_personal_info.html">Personal Information</a>
+          <a href="site_group_processes.html">Group Processes</a>
+          <a href="site_career_plans.html">Career Plans</a>
+          <a href="site_reflection.html">Group Reflection</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Tools
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="tools_github.html">Github</a>
+          <a href="tools_msteams.html">MS Teams</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Project: D&Deasy
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="project_report.html">Project Report</a>
+          <a href="project_artefacts.html">Project Artefacts</a>
+          <a href="site_skills.html">Skills & Jobs</a>
+        </div>
+      </div>
+      <a href="site_references.html">References</a>
+    </div>
+  </navigation>
+  </div>
+  <div class="right">
+    <div class="container_main">
+      <article>
+      <h1>Project Artefacts</h1>
+      <p class="body">
+
+      </p>
+    </article>
+      </div>
+    </div>
+  </div>
+  <script>
+    var link = document.getElementById("back-to-top");
+    var amountScrolled = 250;
+
+    window.addEventListener('scroll', function(e) {
+        if ( window.pageYOffset > amountScrolled ) {
+            link.classList.add('show');
+        } else {
+            link.className = 'back-to-top';
+        }
+    });
+  <!-- Scrolls to Top -->
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        var distance = 0 - window.pageYOffset;
+        var increments = distance/(500/16);
+        function animateScroll() {
+            window.scrollBy(0, increments);
+            if (window.pageYOffset <= document.body.offsetTop) {
+                clearInterval(runAnimation);
+            }
+        };
+        // Loop the animation function
+        var runAnimation = setInterval(animateScroll, 16);
+    });
+
+  </script>
+</body>
+</html>
