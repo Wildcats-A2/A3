@@ -530,20 +530,20 @@ body {
 div.cc_main_bubble {
     display: inline-flex;
     width: 100%;
-  
+
     border-radius: 30px 30px 0px 0px;
     background: rgb(112,128,144);
     background: linear-gradient(180deg, rgba(112,128,144,0.9) 0%, rgba(112,128,144,0.5) 100%);
-  
+
     padding-top: 0%;
     padding-left: 0%;
     padding-right: 0%;
-  
+
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
 
-  }
+}
 
 /* COLLAPSIBLE  */
 .collapsible {
@@ -579,4 +579,5 @@ div.cc_main_bubble {
 table, th, td {
     padding: 10px;
     color: white;
+    font-size: 1em;
 }
