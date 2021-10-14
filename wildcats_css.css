@@ -367,3 +367,10 @@ ol {
   padding-left: 5%;
   padding-right: 0%;
 }
+
+table {
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding: 0%;
+}
