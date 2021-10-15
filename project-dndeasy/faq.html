@@ -32,7 +32,7 @@
     <img class="heading" src="3D Logo.png">
       <div class="main_bubble">
         <h2>FAQ</h2>
-        <p class="body">
+        <!-- <p class="body">
           <ul>
             <li>AC? DC?</li>
             <li>How do I hit / save / use a skill?</li>
@@ -41,11 +41,62 @@
             <li>Am I Proficient? What is Proficiency?</li>
             <li>What can I do on my turn?</li>
           </ul>
-      </p>
-      </div>
+      </p> -->
 
+      <div class="cc_main_bubble">
+        <button type="button" class="collapsible">AC? DC?</button>
+        <div class="faq_content">
+            <p>No not the band. </p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        
+        <button type="button" class="collapsible">How do I hit / save / use a skill?</button>
+        <div class="faq_content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        
+        <button type="button" class="collapsible">How do I deal damage?</button>
+        <div class="faq_content">                  
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div> 
+
+        <button type="button" class="collapsible">Spells? Spell Slots?</button>
+        <div class="faq_content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+          <button type="button" class="collapsible">Spells Saves? Spell DC?</button>
+          <div class="faq_content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
+                </div>
+        <button type="button" class="collapsible">Am I Proficient? What is Proficiency?</button>
+        <div class="faq_content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        
+        <button type="button" class="collapsible">What can I do on my turn?</button>
+        <div class="faq_content">                  
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+      </div>
   </div>
+  <br><br>
   <script>
+    var coll = document.getElementsByClassName("collapsible");
+        var i;
+    
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+            content.style.display = "none";
+        } else {
+            content.style.display = "block";
+        }
+        });
+    }
+
     var link = document.getElementById("back-to-top");
     var amountScrolled = 250;
 
@@ -56,7 +107,7 @@
             link.className = 'back-to-top';
         }
     });
-  <!-- Scrolls to Top -->
+  // <!-- Scrolls to Top -->
     link.addEventListener('click', function(e) {
         e.preventDefault();
 
