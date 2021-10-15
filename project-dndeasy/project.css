@@ -523,3 +523,57 @@ label {
   font-family: 'Open Sans', sans-serif;
   font-size: 1.5em;
 }
+
+/* ------------ CHARACTER CREATION THINGS */
+
+div.cc_main_bubble {
+  display: inline-flex;
+  width: 100%;
+
+
+  padding-top: 0%;
+  padding-left: 0%;
+  padding-right: 0%;
+
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+
+/* COLLAPSIBLE  */
+.collapsible {
+  background-color:darkslategrey;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 15px;
+  font-weight: bolder;
+}
+
+.active, .collapsible:hover {
+  background-color:mediumspringgreen;
+}
+
+.cc_content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+.cc_dropdowns {
+  background-color: darkslategrey;
+  color: white;
+}
+
+table, th, td {
+  padding: 10px;
+  color: white;
+  font-size: 1em;
+}
