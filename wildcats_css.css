@@ -347,9 +347,11 @@ ul {
   line-height: 2;
   letter-spacing: 2px;
   color: black;
+  margin-top: 0%;
   margin-left: 0%;
   margin-right: 0%;
   text-align: left;
+  padding-top: 0%;
   padding-left: 10%;
   padding-right: 10%;
 }
@@ -373,4 +375,18 @@ table {
   margin-left: 10%;
   margin-right: 10%;
   padding: 0%;
+}
+
+td {
+  text-align: left;
+  vertical-align: top;
+  padding-top: 1%;
+  border-bottom: 1px solid slategray;
+  border-left: 0px;
+  border-right: 0px;
+}
+
+th {
+  text-align: left;
+  vertical-align: top;
 }
