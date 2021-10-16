@@ -3,7 +3,7 @@ body {
   max-height: 100vh;
   font-family: 'Open Sans', sans-serif;
   font-size: 1em;
-  background-image: url("project_darkbg.svg");
+  background-image: url("content/site_images/app_bg.jpg");
   background-size: cover;
   background-attachment: fixed;
   justify-content: space-around;
@@ -193,9 +193,10 @@ div.main_bubble {
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 20%;
+  margin-top: 15%;
   margin-left: 0%;
   margin-right: 0%;
+
 }
 
 div.login_main_bubble {
@@ -216,6 +217,14 @@ div.login_main_bubble {
   margin-left: 7%;
   margin-right: 7%;
   z-index: ;
+}
+
+div.characters {
+  justify-content: center;
+  max-width: 90%;
+  display: flex;
+  margin-left: 20%;
+  margin-right: 20%;
 }
 
 div.sub_left {
@@ -298,6 +307,15 @@ a:hover {
 img {
   max-width:80%;
   padding: 5%;
+}
+
+img.splash {
+  max-width: 40vw;
+  margin-left: 20vw;
+  margin-right: 20vw;
+  margin-bottom: 0%;
+
+
 }
 
 img.heading {

@@ -20,23 +20,25 @@
       <span></span>
       <span></span>
       <ul id="menu">
-        <li><a href="account.html"><img class="account" src="account_circle_white_24dp.svg"></a></li>
-        <a href="character_creation.html"><li>Character Creation</li></a>
-        <a href="tutorial.html"><li>Tutorial</li></a>
+        <li><a href="account.html"><img class="account" src="content/site_images/account_circle_white_24dp.svg"></a></li>
+        <a href="account.html"><li>Characters and account</li></a>
+        <a href="character_creation.html"><li>Create a character</li></a>
         <a href="character_sheet.html"><li>Character Sheet</li></a>
         <a href="faq.html"><li>FAQ</li></a>
-        <a href="login.html"><li>Logout</li></a>
+        <a href="index.html"><li>Logout</li></a>
       </ul>
     </div>
   </nav>
   <div class="container">
-    <img class="heading" src="3D Logo.png">
+    <a href="account.html">
+    <img class="heading" src="content/site_images/3D_Logo.png">
+    </a>
       <div class="main_bubble">
         <h2>Account Details</h2>
           <article>
             <div class="sub_container">
               <div class="sub_left">
-                <img src="blank-profile-picture.png">
+                <img src="content/site_images/blank-profile-picture.png">
               </div>
             <div class="sub_right">
               <h3>Hi, (Insert Name)</h3><br>
@@ -45,14 +47,60 @@
                 <p class="body"><strong>Subscription Status: </strong> (Insert Payment Options)</p>
             </div>
           </div>
+          <h2 style="padding: 2%;"><a href="character_creation.html"><strong>Create New Character</strong></a></h2>
+          <p style="text-align: center;">
+            Want to create a new character?
+          </p>
+          <img class="splash" src="content/site_images/SVG/3D Dice.svg">
         </article>
 
-          <a href="character_creation.html" style="padding: 20px;"><strong>Create New Character</strong> </a>
 
+
+        <article>
       <!-- maybe add sketches of characters here under the links -->
-      <a href="character_sheet.html" style="padding: 20px;"><strong>Play as: </strong> (Insert Character Name) </a>
-      <a href="character_sheet.html" style="padding: 20px;"><strong>Play as: </strong> (Insert Character Name)</a>
-      <a href="character_sheet.html" style="padding: 20px;"><strong>Play as: </strong> (Insert Character Name)</a>
+      <div class="characters">
+        <table>
+          <tr>
+            <td><a href="character_sheet.html"><strong>Play as: </strong>Human - Name</a></td>
+          </tr>
+          <tr>
+            <td>
+              <a href="character_sheet.html">
+              <img src="content/site_images/CHARACTERS/icon_human.jpg">
+              </a>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="characters">
+        <table>
+          <tr>
+            <td><a href="character_sheet.html"><strong>Play as: </strong>Elf - Name</a></td>
+          </tr>
+          <tr>
+            <td>
+              <a href="character_sheet.html">
+              <img src="content/site_images/CHARACTERS/icon_elf.jpg">
+              </a>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="characters">
+        <table>
+          <tr>
+            <td><a href="character_sheet.html"><strong>Play as: </strong>Dwarf - Name</a></td>
+          </tr>
+          <tr>
+            <td>
+              <a href="character_sheet.html">
+              <img src="content/site_images/CHARACTERS/icon_dwarf.jpg">
+            </a>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </article>
     </div>
   </div>
 <script>

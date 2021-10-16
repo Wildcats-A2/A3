@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>D&Deasy - Welcome!</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;800&display=swap" rel="stylesheet">
+  <link href="project.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <nav role="navigation">
+    <div id="menuToggle">
+      <input type="checkbox">
+      <span></span>
+      <span></span>
+      <span></span>
+      <ul id="menu">
+        <li><a href="index.html"><img class="account" src="content/site_images/account_circle_white_24dp.svg"></a></li>
+        <li><a href="index.html">Sign in</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <img class="splash" src="content/site_images/splash_header.png">
+      <div class="main_bubble">
+        <div id="id01">
+          <div class="login_container">
+            <label for="uname">Username</label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+            <label for="psw">Password</label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+            <form action="account.html"><input type="submit" value="Login"></form>
+            <a href="#">Forgot password?</a>
+          </div>
+        </div>
+      <img class="splash" src="content/site_images/SVG/3D Dice.svg">
+        <p class="body">
+          <img class="account" src="https://wildcats-a2.github.io/A3/images/logos/logo.png"><br>
+          D&Deasy has been brought to you by the Wildcats.<br>
+          We adopted this team name as we are not your standard cat, we think outside of the box and survive by getting things done.<br>
+          Nothing being fed to us, just pure agility, swift thinking and hunger for survival.<br>
+          <br>
+          D&Deasy exists to make learning how to play Dungeons & Dragons easier for new beginners feeling overwhelmed by the avalanche of information one will encounter.<br>
+          Let us guide you through simple character creation through a simple, navigational website with immersive training information and tips, which will ultimately get more people playing and having fun!
+        </p>
+      </div>
+  </div>
+  <script>
+  // Get the modal
+  var modal = document.getElementById('id01');
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+      if (event.target == modal) {
+          modal.style.display = "none";
+      }
+  }
+
+    var link = document.getElementById("back-to-top");
+    var amountScrolled = 250;
+
+    window.addEventListener('scroll', function(e) {
+        if ( window.pageYOffset > amountScrolled ) {
+            link.classList.add('show');
+        } else {
+            link.className = 'back-to-top';
+        }
+    });
+  <!-- Scrolls to Top -->
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        var distance = 0 - window.pageYOffset;
+        var increments = distance/(500/16);
+        function animateScroll() {
+            window.scrollBy(0, increments);
+            if (window.pageYOffset <= document.body.offsetTop) {
+                clearInterval(runAnimation);
+            }
+        };
+        // Loop the animation function
+        var runAnimation = setInterval(animateScroll, 16);
+    });
+  </script>
+</body>
+</html>

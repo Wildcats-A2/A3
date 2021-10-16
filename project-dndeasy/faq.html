@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,9 +8,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;800&display=swap" rel="stylesheet">
   <link href="project.css" rel="stylesheet" type="text/css">
+
 </head>
 
 <body>
+  <a href="#" id="back-to-top" class="back-to-top" style="display: inline;">Top</a>
   <nav role="navigation">
     <div id="menuToggle">
       <input type="checkbox">
@@ -19,17 +20,19 @@
       <span></span>
       <span></span>
       <ul id="menu">
-        <li><a href="account.html"><img class="account" src="account_circle_white_24dp.svg"></a></li>
-        <a href="character_creation.html"><li>Character Creation</li></a>
-        <a href="tutorial.html"><li>Tutorial</li></a>
+        <li><a href="account.html"><img class="account" src="content/site_images/account_circle_white_24dp.svg"></a></li>
+        <a href="account.html"><li>Characters and account</li></a>
+        <a href="character_creation.html"><li>Create a character</li></a>
         <a href="character_sheet.html"><li>Character Sheet</li></a>
         <a href="faq.html"><li>FAQ</li></a>
-        <a href="login.html"><li>Logout</li></a>
+        <a href="index.html"><li>Logout</li></a>
       </ul>
     </div>
   </nav>
   <div class="container">
-    <img class="heading" src="3D Logo.png">
+    <a href="account.html">
+    <img class="heading" src="content/site_images/3D_Logo.png">
+    </a>
       <div class="main_bubble">
         <h2>FAQ</h2>
         <!-- <p class="body">
@@ -49,16 +52,16 @@
             <p>No not the band. </p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div>
-        
+
         <button type="button" class="collapsible">How do I hit / save / use a skill?</button>
         <div class="faq_content">
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div>
-        
+
         <button type="button" class="collapsible">How do I deal damage?</button>
-        <div class="faq_content">                  
+        <div class="faq_content">
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div> 
+        </div>
 
         <button type="button" class="collapsible">Spells? Spell Slots?</button>
         <div class="faq_content">
@@ -73,9 +76,9 @@
         <div class="faq_content">
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div>
-        
+
         <button type="button" class="collapsible">What can I do on my turn?</button>
-        <div class="faq_content">                  
+        <div class="faq_content">
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div>
       </div>
@@ -84,7 +87,7 @@
   <script>
     var coll = document.getElementsByClassName("collapsible");
         var i;
-    
+
     for (i = 0; i < coll.length; i++) {
         coll[i].addEventListener("click", function() {
         this.classList.toggle("active");
